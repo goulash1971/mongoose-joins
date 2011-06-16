@@ -1,0 +1,33 @@
+{
+  "name": "mongoose-joins",
+  "description": "Plugin support for basic joins in Mongoose",
+  "version": "0.0.1",
+  "author": "Stuart Hudson <goulash1971@yahoo.com>",
+  "keywords": ["mongodb", "mongoose", "mongo", "plugins", "joins"],
+  "homepage": "https://github.com/goulash1971/mongoose-joins",
+  "contributors": [
+    "Stuart Hudson <goulash1971@yahoo.com> (http://goulash1971.com/)"
+  ],
+  "dependencies": {
+    "mongoose-dbref": ">= 0.0.2",
+	"mongoose": ">= 1.0.16"
+  },
+  "scripts": { 
+    "test": "make test"
+  },
+  "directories": {
+    "lib": "lib/",
+	"test": "tests/"
+  },
+  "main": "./index",
+  "engines": { 
+    "node": ">= 0.1.101" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/goulash1971/mongoose-joins.git"
+  },
+  "licenses": [ 
+    {"type": "The MIT License", "url": "http://www.opensource.org/licenses/mit-license.php"}
+  ]
+}
