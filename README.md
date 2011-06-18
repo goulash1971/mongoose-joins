@@ -19,14 +19,14 @@ joins to be manipulated / followed.
 
 The extension provides the following join types:
 
-- `DBRefJoin` : a join where one 'party' holds a `DBRef` to another 'party'
-- `FkJoin` : a join where one 'party' holds a *foreign key* to another 'party'
-- `MappedJoin` : a join where one 'party' holds field values that can be mapped to another `party`
-- `QueryJoin` : a join where the mapping is defined by a query generated from a `function`
+- `DBRefJoin` : a join where one *party* holds a `DBRef` to another *party*
+- `FkJoin` : a join where one *party* holds a *foreign key* of another *party*
+- `MappedJoin` : a join where one *party* holds field values that can be mapped to those in another *party*
+- `QueryJoin` : a join where the mapping between *parties* is defined by a query generated from a `function`
 
 The extension provides the following monkey-patches:
 
-- `schema.join` : used to define a join on a `Schema` instance (representing the source party)
+- `schema.join` : used to define a join on a `Schema` instance (representing the *source party*)
 
 
 ### Installation
