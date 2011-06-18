@@ -41,9 +41,9 @@ instance:
 	// Create a connection to your database
 	var db = mongoose.createConnection("mongodb://localhost/sampledb");
 	
-	// Access the mongoose-dbref module and install everything
-	var dbref = require("mongoose-dbref");
-	var utils = dbref.install(mongoose);
+	// Access the mongoose-joins module and install everything
+	var joins = require("mongoose-joins");
+	var utils = joins.install(mongoose);
 
 To just install the types provided by the extension (either all types or a list of named types):
 
@@ -52,9 +52,9 @@ To just install the types provided by the extension (either all types or a list 
 	// Create a connection to your database
 	var db = mongoose.createConnection("mongodb://localhost/sampledb");
 
-	// Access the mongoose-dbref module and install types
-	var dbref = require("mongoose-dbref");
-	var utils = dbref.loadTypes(mongoose);
+	// Access the mongoose-joins module and install types
+	var joins = require("mongoose-joins");
+	var utils = joins.loadTypes(mongoose);
 
 To just install the plugins provided by the extension (either all plugins or list of named plugins):
 
@@ -63,9 +63,9 @@ To just install the plugins provided by the extension (either all plugins or lis
 	// Create a connection to your database
 	var db = mongoose.createConnection("mongodb://localhost/sampledb");
 	
-	// Access the mongoose-dbref module and install plugins
-	var dbref = require("mongoose-dbref");
-	var utils = dbref.installPlugins(mongoose);
+	// Access the mongoose-joins module and install plugins
+	var joins = require("mongoose-joins");
+	var utils = joins.installPlugins(mongoose);
 
 To just install the patches provided by the extension (either all patches or list of named patches):
 
@@ -74,9 +74,9 @@ To just install the patches provided by the extension (either all patches or lis
 	// Create a connection to your database
 	var db = mongoose.createConnection("mongodb://localhost/sampledb");
 	
-	// Access the mongoose-dbref module and install patches
-	var dbref = require("mongoose-dbref");
-	var utils = dbref.installPatches(mongoose);
+	// Access the mongoose-joins module and install patches
+	var joins = require("mongoose-joins");
+	var utils = joins.installPatches(mongoose);
 
 
 ### How Joins are Modelled
