@@ -9,7 +9,6 @@
     "Stuart Hudson <goulash1971@yahoo.com> (http://goulash1971.com/)"
   ],
   "dependencies": {
-    "mongoose-dbref": ">= 0.0.2",
 	"mongoose": ">= 1.0.16"
   },
   "scripts": { 
