@@ -43,7 +43,15 @@ instance:
 	
 	// Access the mongoose-joins module and install everything
 	var joins = require("mongoose-joins");
-	var utils = joins.install(mongoose);
+	var utils = joins.utils
+	
+	// Install the types, plugins and monkey patches
+	var loaded = joins.install(mongoose);
+
+The `loaded` value returned contains 2 properties:
+
+- `loaded.types` : the join types that were loaded
+- `loaded.plugins` : the extension plugins that were loaded
 
 To just install the types provided by the extension (either all types or a list of named types):
 
@@ -52,9 +60,15 @@ To just install the types provided by the extension (either all types or a list 
 	// Create a connection to your database
 	var db = mongoose.createConnection("mongodb://localhost/sampledb");
 
-	// Access the mongoose-joins module and install types
+	// Access the mongoose-joins module
 	var joins = require("mongoose-joins");
-	var utils = joins.loadTypes(mongoose);
+	var utils = joins.utils
+	
+	// Install the plugins
+	var loaded = joins.loadTypes(mongoose);
+
+The `loaded` value returned contains the types that were loaded, keyed by the name of each type 
+loaded.
 
 To just install the plugins provided by the extension (either all plugins or list of named plugins):
 
@@ -63,9 +77,15 @@ To just install the plugins provided by the extension (either all plugins or lis
 	// Create a connection to your database
 	var db = mongoose.createConnection("mongodb://localhost/sampledb");
 	
-	// Access the mongoose-joins module and install plugins
+	// Access the mongoose-joins module
 	var joins = require("mongoose-joins");
-	var utils = joins.installPlugins(mongoose);
+	var utils = joins.utils
+	
+	// Install the plugins
+	var loaded = joins.installPlugins(mongoose);
+
+The `loaded` value returned contains the plugins that were loaded, keyed by the name of each plugin 
+loaded.
 
 To just install the patches provided by the extension (either all patches or list of named patches):
 
@@ -74,10 +94,12 @@ To just install the patches provided by the extension (either all patches or lis
 	// Create a connection to your database
 	var db = mongoose.createConnection("mongodb://localhost/sampledb");
 	
-	// Access the mongoose-joins module and install patches
+	// Access the mongoose-joins module and the utilities
 	var joins = require("mongoose-joins");
-	var utils = joins.installPatches(mongoose);
-
+	var utils = joins.utils;
+	
+	// Install the monkey patches
+	joins.installPatches(mongoose);
 
 ### How Joins are Modelled
 Each join is defined as an instance of a concrete `JoinType` subclass, where the concrete subclass provides behaviour
